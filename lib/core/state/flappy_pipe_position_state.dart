@@ -1,0 +1,1 @@
+enum FlappyPipePositionState { top, bottom }

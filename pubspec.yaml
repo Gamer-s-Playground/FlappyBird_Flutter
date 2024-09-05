@@ -15,6 +15,7 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   flame: ^1.18.0
+  flame_audio: ^2.10.2
 
 dev_dependencies:
   flutter_test:
@@ -24,3 +25,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/sounds/
+    - assets/fonts/
+
+  fonts:
+    - family: "flappy"
+      fonts:
+        - asset: assets/fonts/flappy_game_font.ttf
+
