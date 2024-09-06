@@ -28,9 +28,18 @@ class FlappyGameOverScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Image.asset(
-              "${FlappyConfig.imageAsset}/game_over.png",
-            ),
+            if (game.bird.score >= 35)
+              Text(
+                "성공!!",
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
+            if (game.bird.score < 35)
+              Image.asset(
+                "${FlappyConfig.imageAsset}/game_over.png",
+              ),
             const SizedBox(height: 20),
             GestureDetector(
               onTap: onRestart,

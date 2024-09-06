@@ -80,5 +80,10 @@ class FlappyGameScreen extends FlameGame
     super.update(dt);
     interval.update(dt);
     score.text = 'Score : ${bird.score}';
+    if (bird.score >= 35) {
+      overlays.add('gameOver');
+      pauseEngine();
+      isHit = true;
+    }
   }
 }
