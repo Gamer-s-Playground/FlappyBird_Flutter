@@ -7,7 +7,7 @@ class FlappyBackgroundWidget extends SpriteComponent with HasGameRef<FlappyGameS
 
   @override
   Future<void> onLoad() async {
-    final background = await Flame.images.load("background.png");
+    final background = await Flame.images.load('background.png');
     size = gameRef.size;
     sprite = Sprite(background);
   }

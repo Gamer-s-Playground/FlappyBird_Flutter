@@ -10,7 +10,7 @@ class FlappyFloorWidget extends ParallaxComponent<FlappyGameScreen> with HasGame
 
   @override
   Future<void> onLoad() async {
-    final floor = await Flame.images.load("floor.png");
+    final floor = await Flame.images.load('floor.png');
     parallax = Parallax([
       ParallaxLayer(
         ParallaxImage(floor, fill: LayerFill.none),

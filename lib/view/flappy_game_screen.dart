@@ -27,10 +27,10 @@ class FlappyGameScreen extends FlameGame
 
     if (isKeyDown) {
       if (keysPressed.contains(LogicalKeyboardKey.keyB)) {
-        if (overlays.isActive("mainMenu")) {
-          overlays.remove("mainMenu");
+        if (overlays.isActive('mainMenu')) {
+          overlays.remove('mainMenu');
           resumeEngine();
-        } else if (overlays.isActive("gameOver")) {
+        } else if (overlays.isActive('gameOver')) {
           bird.reset();
           overlays.remove('gameOver');
           overlays.add('mainMenu');

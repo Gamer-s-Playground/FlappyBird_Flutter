@@ -1,7 +1,6 @@
 import 'package:flappybird/core/flappy_config.dart';
 import 'package:flappybird/view/flappy_game_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class FlappyMenuScreen extends StatefulWidget {
   final FlappyGameScreen game;
@@ -34,13 +33,13 @@ class _FlappyMenuScreenState extends State<FlappyMenuScreen> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                "${FlappyConfig.imageAsset}/menu.jpg",
+                '${FlappyConfig.imageAsset}/menu.jpg',
               ),
               fit: BoxFit.cover,
             ),
           ),
           child: Image.asset(
-            "${FlappyConfig.imageAsset}/message.png",
+            '${FlappyConfig.imageAsset}/message.png',
           ),
         ),
       ),

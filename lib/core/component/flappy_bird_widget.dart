@@ -14,9 +14,9 @@ class FlappyBirdWidget extends SpriteGroupComponent<FlappyBirdMovementState>
 
   @override
   Future<void> onLoad() async {
-    final birdMidFlap = await gameRef.loadSprite("bird_midflap.png");
-    final birdUpFlap = await gameRef.loadSprite("bird_upflap.png");
-    final birdDownFlap = await gameRef.loadSprite("bird_downflap.png");
+    final birdMidFlap = await gameRef.loadSprite('bird_midflap.png');
+    final birdUpFlap = await gameRef.loadSprite('bird_upflap.png');
+    final birdDownFlap = await gameRef.loadSprite('bird_downflap.png');
 
     gameRef.bird;
 
@@ -43,7 +43,6 @@ class FlappyBirdWidget extends SpriteGroupComponent<FlappyBirdMovementState>
         onComplete: () => current = FlappyBirdMovementState.down,
       ),
     );
-    //FlameAudio.play("fly.wav");
     current = FlappyBirdMovementState.up;
   }
 

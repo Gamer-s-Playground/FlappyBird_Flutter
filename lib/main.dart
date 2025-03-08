@@ -11,8 +11,8 @@ void main() {
       game: game,
       initialActiveOverlays: const [FlappyMenuScreen.id],
       overlayBuilderMap: {
-        "mainMenu": (context, _) => FlappyMenuScreen(game: game),
-        "gameOver": (context, _) => FlappyGameOverScreen(game: game),
+        'mainMenu': (context, _) => FlappyMenuScreen(game: game),
+        'gameOver': (context, _) => FlappyGameOverScreen(game: game),
       },
     ),
   );

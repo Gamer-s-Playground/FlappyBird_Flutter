@@ -20,7 +20,7 @@ class FlappyGameOverScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "score : ${game.bird.score}",
+              'score : ${game.bird.score}',
               style: const TextStyle(
                 fontSize: 60,
                 color: Colors.white,
@@ -30,7 +30,7 @@ class FlappyGameOverScreen extends StatelessWidget {
             const SizedBox(height: 20),
             if (game.bird.score >= 35)
               Text(
-                "성공!!",
+                '성공!!',
                 style: TextStyle(
                   fontSize: 30,
                   color: Colors.white,
@@ -38,7 +38,7 @@ class FlappyGameOverScreen extends StatelessWidget {
               ),
             if (game.bird.score < 35)
               Image.asset(
-                "${FlappyConfig.imageAsset}/game_over.png",
+                '${FlappyConfig.imageAsset}/game_over.png',
               ),
             const SizedBox(height: 20),
             GestureDetector(
@@ -50,7 +50,7 @@ class FlappyGameOverScreen extends StatelessWidget {
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: Text(
-                    "다시 시도",
+                    '다시 시도',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
