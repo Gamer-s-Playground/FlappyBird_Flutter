@@ -29,7 +29,7 @@ class FlappyGameOverScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             if (game.bird.score >= 35)
-              Text(
+              const Text(
                 '성공!!',
                 style: TextStyle(
                   fontSize: 30,

@@ -17,7 +17,7 @@ class FlappyPipeWidget extends SpriteComponent with HasGameRef<FlappyGameScreen>
   @override
   Future<void> onLoad() async {
     final pipe = await Flame.images.load('pipe.png');
-    final pipeRotated = await Flame.images.load('ㅇ');
+    final pipeRotated = await Flame.images.load('pipe_rotated.png');
 
     size = Vector2(50, height);
     switch (pipePositionState) {
