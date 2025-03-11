@@ -1,3 +1,4 @@
+import 'package:flappybird/core/flappy_config.dart';
 import 'package:flappybird/view/flappy_game_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,55 @@ class FlappyGameOverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
+    return Material(
       color: Colors.black38,
-      child: Placeholder(),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'score : ${game.bird.score}',
+              style: const TextStyle(
+                fontSize: 60,
+                color: Colors.white,
+                fontFamily: 'flappy',
+              ),
+            ),
+            const SizedBox(height: 20),
+            if (game.bird.score >= 35)
+              const Text(
+                '성공!!',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
+            if (game.bird.score < 35)
+              Image.asset(
+                '${FlappyConfig.imageAsset}/game_over.png',
+              ),
+            const SizedBox(height: 20),
+            GestureDetector(
+              onTap: onRestart,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(8)),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Text(
+                    '다시 시도',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 

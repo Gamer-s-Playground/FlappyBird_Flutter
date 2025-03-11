@@ -1,11 +1,9 @@
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:flappybird/core/component/flappy_background_widget.dart';
 import 'package:flappybird/core/component/flappy_bird_widget.dart';
-import 'package:flappybird/core/component/flappy_floor_widget.dart';
-import 'package:flappybird/core/component/flappy_pipe_group_widget.dart';
 import 'package:flappybird/core/flappy_config.dart';
+import 'package:flutter/material.dart';
 
 class FlappyGameScreen extends FlameGame
     with TapDetector, HasCollisionDetection, KeyboardEvents {
@@ -16,14 +14,17 @@ class FlappyGameScreen extends FlameGame
   Timer interval = Timer(FlappyConfig.pipeInterval, repeat: true);
   bool isHit = false;
 
-  @override
-  Future<void> onLoad() async {
-    addAll([
-      FlappyBackgroundWidget(),
-      FlappyFloorWidget(),
-      bird = FlappyBirdWidget(),
-    ]);
-
-    interval.onTick = () => add(FlappyPipeGroupWidget());
+  TextComponent buildScore() {
+    return TextComponent(
+      position: Vector2(size.x / 2, size.y / 2 * 0.2),
+      anchor: Anchor.center,
+      textRenderer: TextPaint(
+        style: const TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'flappy',
+        ),
+      ),
+    );
   }
 }
