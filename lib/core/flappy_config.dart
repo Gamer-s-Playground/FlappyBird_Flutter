@@ -4,6 +4,7 @@ class FlappyConfig {
   static const pipeInterval = 1.5; // 파이프가 생성되는 간격 (주기)
   static const birdVelocity = 210; // 새가 떨어지는 속도
   static const gravity = -100.0; // 터치 이벤트 시, 가해지는 중력
+  static const score = 35;
 
   static const imageAsset = 'assets/images';
 }
